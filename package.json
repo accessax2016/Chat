@@ -19,6 +19,9 @@
         "vue": "^2.5.7"
     },
     "dependencies": {
-        "bootstrap": "^4.0.0-beta.3"
+        "bootstrap": "^4.0.0-beta.3",
+        "laravel-echo": "^1.3.3",
+        "pusher-js": "^4.2.2",
+        "vue-chat-scroll": "^1.2.1"
     }
 }
