@@ -27,6 +27,7 @@ class Event implements ShouldBroadcast
     {
         $this->message = $message;
         $this->user = $user->name;
+        $this->dontBroadcastToCurrentUser();
     }
 
     /**

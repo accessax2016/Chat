@@ -1,7 +1,8 @@
 <template>
-    <div :style="MessageStyle">
+    <div class="message">
         <li class="list-group-item" :class="messageClass"><slot></slot></li>
-        <small class="badge float-right" :class="badgeClass">You</small>
+        <small>{{ time }}</small>
+        <small class="badge float-right" :class="badgeClass">{{ user }}</small>
         <br>
     </div>
 </template>
@@ -10,13 +11,11 @@
     export default {
         props: [
             'color',
-            'format'
+            'user',
+            'time'
         ],
 
         computed: {
-            MessageStyle() {
-                return this.format;
-            },
             messageClass() {
                 return "list-group-item-" + this.color;
             },
@@ -30,3 +29,9 @@
         }
     }
 </script>
+
+<style type="text/css">
+    .message {
+        padding: 0px 15px;
+    }
+</style>
